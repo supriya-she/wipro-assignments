@@ -1,0 +1,109 @@
+
+<p>An invoice, bill or tab is a commercial document issued by a seller toggle
+     a buyer relating to a sale transaction and indicating the products, quantities, and agreed-upon prices for products or services the seller had provided the buyer. 
+    Payment terms are usually stated on the invoice.</p>
+
+    <p>An invoice is an itemized statement of the money that's owed for goods or services. If you buy books online, they will usually arrive with an invoice telling what books you bought and how much they cost.
+
+        Invoice comes from the French verb envoyer, which means to send, and "send" is a verb often used with the noun invoice, like when the online bookstore sends you an invoice. The same sense occurs when you use invoice as a verb. If you tell someone to invoice you for work they've done, you're asking them to send you a bill.
+        
+        </p>
+        <!--forms with Api here done-->
+        <form name="myForm" #frm="ngForm" (ngSubmit)="onSubmitData(frm)">
+            <div class="form-group">
+                
+                <input type="hidden" name="id" class="form-control" #id ="ngModel" ngModel
+                [ngModel]="idd">
+                </div>
+            <div class="form-group">
+                <label for="FirstName">First Name:</label>
+                <input type="text" name="fname" class="form-control" #fname="ngModel" ngModel
+                [(ngModel)]="fn">
+            </div><hr>
+        
+            <div class="form-group">
+                <label for="LastName">Last Name:</label>
+                <input type="text" name="lname" class="form-control"#lname="ngModel" ngModel
+                [(ngModel)]="ln">
+            </div><hr>
+        
+            <div class="form-group">
+                <label for="Email">Email:</label>
+                <input type="Email" name="eml" class="form-control"#Email="ngModel" ngModel
+                [(ngModel)]="el">
+            </div><hr>
+        
+            <div class="form-group">
+                <label for="Cource">Cource:</label>
+                <select name="Course" id="" class="form-control"#Cource="ngModel" ngModel
+                [(ngModel)]="cor">
+                    <option *ngFor = "let cource of cources">{{cource}}</option>
+                </select>
+            </div><hr>
+        
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <input type="radio" name="gender" class="radio" value="Male"#Gender="ngModel" ngModel
+                [(ngModel)]="gen">
+                <label for="Male">Male</label>
+                <input type="radio" name="gender" class="radio"value="Female"#Gender="ngModel" ngModel
+                [(ngModel)]="gen">
+                <label for="female">Female</label>
+            </div><hr>
+        
+            <div class="form-group">
+                <label for="Password">Password:</label>
+                <input type="Password" name="Pass" class="form-control"#Pass="ngModel" ngModel
+                [(ngModel)]="ps">
+            </div><hr>
+        
+            <div class="form-group">
+                <label for="CPassword"> Confirm Password:</label>
+                <input type="Password" name="CPass" class="form-control"#Cpass="ngModel" ngModel
+                [(ngModel)]="cps">
+            </div><hr><br> <br>
+        
+            <div class="form-group">
+                <button type="Submit" class="btn btn-info">Submit</button>
+        
+                <button type="button" class="btn btn-info" (click)="onClickUpdateBtn(frm)">Update</button>
+            </div>
+        
+        
+        
+        </form>
+        <div *ngIf="allData?.length>0">
+            <table class="table table-primary">
+               <tr>
+                   <th> First Name </th>
+                   <th> Last Name </th>
+                   <th> Email </th>
+                   <th> Cource </th>
+                   <th> Gender </th>
+                   <th> Password </th>
+                   <th> Confirm Password </th>
+                   <th>Action</th>
+                   <th>Action</th>
+               </tr>
+               <tr *ngFor ="let dt of allData">
+                   <td>{{dt.fname}}</td>
+                   <td>{{dt.lname}}</td>
+                   <td>{{dt.eml}}</td>
+                   <td>{{dt.Course}}</td>
+                   <td>{{dt.gender}}</td>
+                   <td>{{dt.Pass}}</td>
+                   <td>{{dt.CPass}}</td>
+                   <td>
+                       <button class="btn btn-danger" (click) ="onDel(dt)">Delete</button>
+                   </td>
+                   <td>
+                       <button class="btn btn-warning" (click)="onUpdate(dt)">Update</button>
+                   </td>
+                   
+                       
+                   
+               </tr>
+           
+            </table>
+           </div>
+           

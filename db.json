@@ -1,0 +1,88 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+
+  "Employee": [
+    {
+      "id":0,
+    "Name":"supriya",
+    "Lname":"dighe",
+    "task":"dropdown",
+    "status":"completed",
+    "phone no":9767006441,
+    "Email":"supriyashelke777@gmail.com"
+    
+
+    },
+    
+      {
+        
+        "id":1,
+        "Name":"kriti",
+        "Lname":"senon",
+        "task":"dropdown",
+        "status":"inprogress",
+        "phone no":9709876567,
+        "Email":"kritisenon838@gmail.com"
+        
+      },
+      {
+        "id":2,
+        "Name": "ayan" ,       
+        "Lname":"shaikh",
+        "task":"dropdown",
+        "status":"completed",
+        "phone no":9709876567,
+        "Email":"ayanshaikh123@gmail.com"
+        
+      },
+      {
+        "id":3,
+        "Name": "sagar" ,       
+        "Lname":"rajput",
+        "task":"build form",
+        "status":"inprogress",
+        "phone no":9709876567,
+        "Email":"sagar22@gmail.com"
+        
+      },
+      {
+        "id":4,
+        "Name":"kriti",
+        "Lname":"senon",
+        "task":"dropdown",
+        "status":"inprogress",
+        "phone no":9709876567,
+        "Email":"kritisenon838@gmail.com"
+      },
+      {
+        "id":5,
+        "Name": "payal" ,       
+        "Lname":"singh",
+        "task":"dropdown",
+        "status":"inprogress",
+        "phone no":9709876567,
+        "Email":"payal1234@gmail.com"
+        
+      }
+
+        
+
+  ],
+  
+  "profile": {
+    "name": "typicode"
+  }
+}
